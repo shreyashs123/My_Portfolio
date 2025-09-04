@@ -1,8 +1,13 @@
 import React from 'react';
 import { useTheme, useMediaQuery } from '@mui/material';
+import AppBar from '@mui/material/AppBar';
+import Toolbar from '@mui/material/Toolbar';
 import Box from '@mui/material/Box';
 import IconButton from '@mui/material/IconButton';
-import MenuIcon from '@mui/icons-material/Menu';
+import Avatar from '@mui/material/Avatar';
+import Typography from '@mui/material/Typography';
+import LightModeIcon from '@mui/icons-material/LightMode';
+import DarkModeIcon from '@mui/icons-material/DarkMode';
 
 import Drawer from './components/Drawer';
 import About from './components/about';
@@ -11,26 +16,19 @@ import Projects from './components/Projects';
 import ProjectSDM from './components/ProjectSDM';
 import Contact from './components/Contact';
 import MobileNavigation from './components/MobileNavigation';
+import { useCustomTheme } from './contexts/ThemeContext';
 
 function App() {
   const [activeSection, setActiveSection] = React.useState('home');
-  const [mobileOpen, setMobileOpen] = React.useState(false);
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('md'));
+  const { isDarkMode, toggleTheme } = useCustomTheme();
 
   const scrollToSection = (sectionId) => {
     const section = document.querySelector(`[data-section="${sectionId}"]`);
     if (section) {
       section.scrollIntoView({ behavior: 'smooth' });
     }
-    // Close mobile drawer after navigation
-    if (isMobile) {
-      setMobileOpen(false);
-    }
-  };
-
-  const handleDrawerToggle = () => {
-    setMobileOpen(!mobileOpen);
   };
 
   React.useEffect(() => {
@@ -53,59 +51,44 @@ function App() {
 
   return (
     <div className="App" style={{ display: 'flex', width: '100%', overflowX: 'hidden' }}>
-      {/* Mobile Menu Button */}
+      {/* Mobile Header (profile + role + theme) */}
       {isMobile && (
-        <Box
-          sx={{
-            position: 'fixed',
-            top: 16,
-            left: 16,
-            zIndex: 1300
-          }}
-        >
-          <IconButton
-            aria-label="open drawer"
-            edge="start"
-            onClick={handleDrawerToggle}
-            sx={{ p: 1, color: '#ffffff' }}
-          >
-            <MenuIcon />
-          </IconButton>
-        </Box>
+        <AppBar position="fixed" color="default" elevation={1}>
+          <Toolbar sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
+            <Avatar src="/hs.jpg" alt="Shreyas hs" sx={{ width: 40, height: 40 }} />
+            <Box sx={{ flex: 1, minWidth: 0 }}>
+              <Typography variant="subtitle1" noWrap sx={{ fontWeight: 700 }}>
+                Shreyas hs
+              </Typography>
+              <Typography variant="caption" color="text.secondary" noWrap>
+                Frontend Developer
+              </Typography>
+            </Box>
+            <IconButton onClick={toggleTheme} aria-label="toggle theme" color="inherit">
+              {isDarkMode ? <LightModeIcon /> : <DarkModeIcon />}
+            </IconButton>
+          </Toolbar>
+        </AppBar>
       )}
 
-      {/* Mobile Backdrop */}
-      {isMobile && mobileOpen && (
-        <Box
-          sx={{
-            position: 'fixed',
-            top: 0,
-            left: 0,
-            right: 0,
-            bottom: 0,
-            bgcolor: 'rgba(0, 0, 0, 0.5)',
-            zIndex: 1100,
-          }}
-          onClick={handleDrawerToggle}
+      {/* Drawer (desktop only) */}
+      {!isMobile && (
+        <Drawer
+          onSelect={(id) => scrollToSection(id)}
+          activeSection={activeSection}
+          profile={{ name: 'Shreyas hs', role: 'Frontend Developer', avatarUrl: '/hs.jpg' }}
+          width={320}
+          mobileOpen={false}
+          onClose={() => {}}
+          isMobile={false}
         />
       )}
-
-      {/* Drawer */}
-      <Drawer
-        onSelect={(id) => scrollToSection(id)}
-        activeSection={activeSection}
-        profile={{ name: 'Shreyas hs', role: 'Frontend Developer', avatarUrl: '/hs.jpg' }}
-        width={320}
-        mobileOpen={mobileOpen}
-        onClose={handleDrawerToggle}
-        isMobile={isMobile}
-      />
       
       {/* Main Content */}
       <Box sx={{ 
         flex: 1, 
         marginLeft: isMobile ? 0 : '320px',
-        paddingTop: isMobile ? 10 : 0,
+        paddingTop: isMobile ? 8 : 0,
         paddingBottom: isMobile ? 14 : 0,
         px: { xs: 0, sm: 0 },
         bgcolor: 'background.default',
