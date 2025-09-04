@@ -34,7 +34,7 @@ export default function MobileLanding() {
         <Card sx={{ mb: 3, borderRadius: 3, boxShadow: 2 }}>
           <CardContent sx={{ textAlign: 'center', py: 4 }}>
             <Avatar
-              src="/shreyas.jpg"
+              src="/shreyas1.jpg"
               alt="Shreyas hs"
               sx={{ 
                 width: 120, 

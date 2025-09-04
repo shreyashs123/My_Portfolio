@@ -59,7 +59,7 @@ function App() {
       {isMobile && (
         <AppBar position="fixed" color="default" elevation={1}>
           <Toolbar sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
-            <Avatar src="/hs.jpg" alt="Shreyas hs" sx={{ width: 40, height: 40 }} />
+            <Avatar src="/shreyas1.jpg" alt="Shreyas hs" sx={{ width: 40, height: 40 }} />
             <Box sx={{ flex: 1, minWidth: 0 }}>
               <Typography variant="subtitle1" noWrap sx={{ fontWeight: 700 }}>
                 Shreyas hs
@@ -80,7 +80,7 @@ function App() {
         <Drawer
           onSelect={(id) => scrollToSection(id)}
           activeSection={activeSection}
-          profile={{ name: 'Shreyas hs', role: 'Frontend Developer', avatarUrl: '/hs.jpg' }}
+          profile={{ name: 'Shreyas hs', role: 'Frontend Developer', avatarUrl: '/shreyas1.jpg' }}
           width={320}
           mobileOpen={false}
           onClose={() => {}}
