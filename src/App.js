@@ -16,6 +16,10 @@ import Projects from './components/Projects';
 import ProjectSDM from './components/ProjectSDM';
 import Contact from './components/Contact';
 import MobileNavigation from './components/MobileNavigation';
+import GitHubIcon from '@mui/icons-material/GitHub';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import MailOutlineIcon from '@mui/icons-material/MailOutline';
+import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import { useCustomTheme } from './contexts/ThemeContext';
 
 function App() {
@@ -124,6 +128,36 @@ function App() {
             onLinkedIn={() => window.open('https://www.linkedin.com/in/Shreyas hs-p-2247aa374', '_blank', 'noopener,noreferrer')}
           />
         </div>
+        {isMobile && (
+          <Box sx={{
+            mt: 2,
+            borderTop: 1,
+            borderColor: 'divider',
+            px: 2,
+            py: 1.5,
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'space-between'
+          }}>
+            <Typography variant="caption" color="text.secondary">
+              © {new Date().getFullYear()} Shreyas hs
+            </Typography>
+            <Box sx={{ display: 'flex', gap: 1 }}>
+              <IconButton size="small" color="inherit" component="a" href="https://github.com/shreyashs123" target="_blank" rel="noopener noreferrer" aria-label="github">
+                <GitHubIcon />
+              </IconButton>
+              <IconButton size="small" color="inherit" component="a" href="https://www.linkedin.com/in/shreyas-h-s-gowda" target="_blank" rel="noopener noreferrer" aria-label="linkedin">
+                <LinkedInIcon />
+              </IconButton>
+              <IconButton size="small" color="inherit" component="a" href="mailto:shreyashsgowda2@gmail.com" aria-label="email">
+                <MailOutlineIcon />
+              </IconButton>
+              <IconButton size="small" color="inherit" component="a" href="https://wa.me/6363894617" target="_blank" rel="noopener noreferrer" aria-label="whatsapp">
+                <WhatsAppIcon />
+              </IconButton>
+            </Box>
+          </Box>
+        )}
       </Box>
       {isMobile && (
         <MobileNavigation
