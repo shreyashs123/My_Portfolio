@@ -104,7 +104,7 @@ export default function Drawer({
           }}
         >
                                 <Avatar
-            src={profile.avatarUrl || '/hs.jpg'}
+            src={profile.avatarUrl || '/shreyas1.jpg'}
             alt={profile.name}
             sx={{ 
               width: 56, 
