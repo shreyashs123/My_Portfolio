@@ -106,7 +106,7 @@ function App() {
         flex: 1, 
         marginLeft: isMobile ? 0 : '320px',
         paddingTop: isMobile ? 10 : 0,
-        paddingBottom: isMobile ? 10 : 0,
+        paddingBottom: isMobile ? 14 : 0,
         bgcolor: 'background.default',
         minHeight: '100vh'
       }}>

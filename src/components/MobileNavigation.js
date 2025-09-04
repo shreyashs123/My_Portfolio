@@ -34,7 +34,7 @@ export default function MobileNavigation({ activeSection = 'home', onSelect }) {
         background: 'linear-gradient(135deg, #C9E4F7 0%, #B8D9F0 100%)',
         borderRadius: '20px 20px 0 0',
         boxShadow: '0 -4px 20px rgba(0, 0, 0, 0.1)',
-        padding: '8px 16px 16px 16px',
+        padding: '8px 16px calc(16px + env(safe-area-inset-bottom)) 16px',
         mx: 2,
         mb: 1
       }}

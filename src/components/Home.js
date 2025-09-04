@@ -76,8 +76,8 @@ export default function Home() {
       sx={{ 
         py: { xs: 2, sm: 4, md: 6 }, 
         textAlign: 'center',
-        minHeight: '100vh',
-        height: '100vh',
+        minHeight: '100svh',
+        height: '100svh',
         backgroundImage: `url("${backgroundImages[currentBackground]}")`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
