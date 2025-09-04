@@ -31,23 +31,23 @@ Driven by a desire to create meaningful digital experiences, I'm eager to join d
 }) {
   return (
     <Box component="section" sx={{ bgcolor: 'background.default', py: { xs: 3, sm: 4, md: 5 } }}>
-      <Container maxWidth="md">
+      <Container maxWidth="md" sx={{ px: { xs: 2, md: 0 } }}>
         <Grid container spacing={4} alignItems="center">
           <Grid item xs={12}>
-            <Typography variant="h4" sx={{ fontWeight: 800, mb: 2 }}>
+            <Typography variant="h4" sx={{ fontWeight: 800, mb: 2, textAlign: { xs: 'center', md: 'left' } }}>
               About
             </Typography>
-            <Typography variant="h4" sx={{ fontWeight: 800, mt: 0.5 }}>
+            <Typography variant="h4" sx={{ fontWeight: 800, mt: 0.5, textAlign: { xs: 'center', md: 'left' } }}>
               {name}
             </Typography>
-            <Typography variant="subtitle1" color="text.secondary" sx={{ mb: 2 }}>
+            <Typography variant="subtitle1" color="text.secondary" sx={{ mb: 2, textAlign: { xs: 'center', md: 'left' } }}>
               {role}
             </Typography>
-            <Typography variant="body1" sx={{ lineHeight: 1.8 }}>
+            <Typography variant="body1" sx={{ lineHeight: 1.8, textAlign: { xs: 'center', md: 'left' } }}>
               {summary}
             </Typography>
 
-            <Stack direction={{ xs: 'column', sm: 'row' }} spacing={1.5} sx={{ mt: 3 }}>
+            <Stack direction={{ xs: 'column', sm: 'row' }} spacing={1.5} sx={{ mt: 3, alignItems: 'center', justifyContent: { xs: 'center', sm: 'flex-start' } }}>
               <Button 
                 variant="contained" 
                 color="primary" 
@@ -75,7 +75,7 @@ Driven by a desire to create meaningful digital experiences, I'm eager to join d
         <Divider sx={{ my: { xs: 4, sm: 6 } }} />
 
         <Box>
-          <Typography variant="h5" sx={{ fontWeight: 800, mb: 2 }}>
+          <Typography variant="h5" sx={{ fontWeight: 800, mb: 2, textAlign: { xs: 'center', md: 'left' } }}>
             Skills
           </Typography>
           <Stack direction="row" spacing={1} useFlexGap flexWrap="wrap" sx={{ mt: 1.5 }}>
@@ -88,7 +88,7 @@ Driven by a desire to create meaningful digital experiences, I'm eager to join d
         <Divider sx={{ my: { xs: 4, sm: 6 } }} />
 
         <Box>
-          <Typography variant="h5" sx={{ fontWeight: 800, mb: 2 }}>
+          <Typography variant="h5" sx={{ fontWeight: 800, mb: 2, textAlign: { xs: 'center', md: 'left' } }}>
             Educational Qualifications
           </Typography>
           <Box sx={{ 
@@ -97,7 +97,8 @@ Driven by a desire to create meaningful digital experiences, I'm eager to join d
             borderColor: 'divider', 
             borderRadius: 2,
             bgcolor: 'background.paper',
-            overflow: 'hidden',
+            overflowX: { xs: 'auto', md: 'hidden' },
+            overflowY: 'hidden',
             '&:hover': { boxShadow: 2, transition: 'box-shadow 0.3s ease' }
           }}>
             <Box

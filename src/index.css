@@ -22,6 +22,12 @@ img, video, canvas, svg {
   box-sizing: border-box;
 }
 
+/* Prevent horizontal overscroll bounce on mobile */
+html, body {
+  overscroll-behavior-x: none;
+  touch-action: pan-y;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;

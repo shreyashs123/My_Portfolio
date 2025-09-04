@@ -52,7 +52,7 @@ function App() {
   }, []);
 
   return (
-    <div className="App" style={{ display: 'flex' }}>
+    <div className="App" style={{ display: 'flex', width: '100%', overflowX: 'hidden' }}>
       {/* Mobile Menu Button */}
       {isMobile && (
         <Box
@@ -107,8 +107,10 @@ function App() {
         marginLeft: isMobile ? 0 : '320px',
         paddingTop: isMobile ? 10 : 0,
         paddingBottom: isMobile ? 14 : 0,
+        px: { xs: 0, sm: 0 },
         bgcolor: 'background.default',
-        minHeight: '100vh'
+        minHeight: '100vh',
+        width: '100%'
       }}>
         {/* Home Section */}
         <div data-section="home">
