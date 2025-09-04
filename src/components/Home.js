@@ -78,27 +78,16 @@ export default function Home() {
         textAlign: 'center',
         minHeight: '100svh',
         height: '100svh',
-        backgroundImage: `url("${backgroundImages[currentBackground]}")`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundRepeat: 'no-repeat',
-        backgroundAttachment: { xs: 'scroll', md: 'fixed' },
+        background: `
+          radial-gradient(1200px 600px at 10% 10%, rgba(56, 189, 248, 0.15), transparent),
+          radial-gradient(1000px 500px at 90% 20%, rgba(34, 197, 94, 0.12), transparent),
+          linear-gradient(135deg, #0b1020 0%, #0f2340 40%, #0a2f4a 70%, #083046 100%)
+        `,
         position: 'relative',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
-        transition: 'background-image 2s ease-in-out',
-        imageRendering: 'high-quality',
-        imageRendering: '-webkit-optimize-contrast',
-        imageRendering: 'crisp-edges',
-        '@media (min-resolution: 2dppx)': {
-          backgroundSize: 'cover',
-          imageRendering: 'high-quality',
-        },
-        '@media (min-resolution: 3dppx)': {
-          backgroundSize: 'cover',
-          imageRendering: 'high-quality',
-        },
+        transition: 'background 0.6s ease-in-out',
         '@keyframes fadeInOut': {
           '0%, 100%': {
             opacity: 1,
@@ -138,9 +127,7 @@ export default function Home() {
             color: 'white',
             textShadow: '2px 2px 4px rgba(0,0,0,0.5)',
             minHeight: { xs: '2rem', sm: '2.5rem' },
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
+            textAlign: 'center',
             fontFamily: 'serif',
             letterSpacing: '0.1em',
             fontSize: { xs: '1.5rem', sm: '2.125rem' },
@@ -165,9 +152,7 @@ export default function Home() {
             color: 'white',
             textShadow: '2px 2px 4px rgba(0,0,0,0.5)',
             minHeight: { xs: '2.5rem', sm: '3.5rem' },
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
+            textAlign: 'center',
             fontFamily: 'serif',
             letterSpacing: '0.1em',
             fontSize: { xs: '1.75rem', sm: '3rem' },
@@ -192,9 +177,7 @@ export default function Home() {
             color: 'white',
             textShadow: '2px 2px 4px rgba(0,0,0,0.5)',
             minHeight: { xs: '2.5rem', sm: '3.5rem' },
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
+            textAlign: 'center',
             fontSize: { xs: '1.5rem', sm: '2.5rem' }
           }}
         >
@@ -216,7 +199,8 @@ export default function Home() {
             color: 'white',
             textShadow: '1px 1px 2px rgba(0,0,0,0.5)',
             fontSize: { xs: '0.9rem', sm: '1.1rem' },
-            px: { xs: 1, sm: 0 }
+            px: { xs: 1, sm: 0 },
+            textAlign: 'center'
           }}
         >
           I craft responsive, accessible, and performant web experiences with React and modern tooling.
