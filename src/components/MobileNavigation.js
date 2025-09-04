@@ -3,9 +3,9 @@ import Box from '@mui/material/Box';
 import BottomNavigation from '@mui/material/BottomNavigation';
 import BottomNavigationAction from '@mui/material/BottomNavigationAction';
 import HomeIcon from '@mui/icons-material/Home';
-import SearchIcon from '@mui/icons-material/Search';
-import FavoriteIcon from '@mui/icons-material/Favorite';
-import PersonIcon from '@mui/icons-material/Person';
+import InfoIcon from '@mui/icons-material/Info';
+import WorkIcon from '@mui/icons-material/Work';
+import ContactSupportIcon from '@mui/icons-material/ContactSupport';
 
 export default function MobileNavigation({ activeSection = 'home', onSelect }) {
   const handleChange = (event, newValue) => {
@@ -62,26 +62,10 @@ export default function MobileNavigation({ activeSection = 'home', onSelect }) {
           },
         }}
       >
-        <BottomNavigationAction
-          label="Home"
-          value="home"
-          icon={<HomeIcon />}
-        />
-        <BottomNavigationAction
-          label="Search"
-          value="search"
-          icon={<SearchIcon />}
-        />
-        <BottomNavigationAction
-          label="Likes"
-          value="likes"
-          icon={<FavoriteIcon />}
-        />
-        <BottomNavigationAction
-          label="Profile"
-          value="profile"
-          icon={<PersonIcon />}
-        />
+        <BottomNavigationAction label="Home" value="home" icon={<HomeIcon />} />
+        <BottomNavigationAction label="About" value="about" icon={<InfoIcon />} />
+        <BottomNavigationAction label="Projects" value="projects" icon={<WorkIcon />} />
+        <BottomNavigationAction label="Contact" value="contact" icon={<ContactSupportIcon />} />
       </BottomNavigation>
     </Box>
   );

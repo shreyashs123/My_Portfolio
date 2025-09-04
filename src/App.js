@@ -2,7 +2,7 @@ import React from 'react';
 import { useTheme, useMediaQuery } from '@mui/material';
 import Box from '@mui/material/Box';
 import IconButton from '@mui/material/IconButton';
-import NavigationIcon from '@mui/icons-material/Navigation';
+import MenuIcon from '@mui/icons-material/Menu';
 
 import Drawer from './components/Drawer';
 import About from './components/about';
@@ -10,6 +10,7 @@ import Home from './components/Home';
 import Projects from './components/Projects';
 import ProjectSDM from './components/ProjectSDM';
 import Contact from './components/Contact';
+import MobileNavigation from './components/MobileNavigation';
 
 function App() {
   const [activeSection, setActiveSection] = React.useState('home');
@@ -59,22 +60,16 @@ function App() {
             position: 'fixed',
             top: 16,
             left: 16,
-            zIndex: 1300,
-            bgcolor: 'background.paper',
-            borderRadius: '50%',
-            boxShadow: 3,
-            border: 1,
-            borderColor: 'divider',
+            zIndex: 1300
           }}
         >
           <IconButton
-            color="inherit"
             aria-label="open drawer"
             edge="start"
             onClick={handleDrawerToggle}
-            sx={{ p: 1 }}
+            sx={{ p: 1, color: '#ffffff' }}
           >
-            <NavigationIcon />
+            <MenuIcon />
           </IconButton>
         </Box>
       )}
@@ -111,6 +106,7 @@ function App() {
         flex: 1, 
         marginLeft: isMobile ? 0 : '320px',
         paddingTop: isMobile ? 10 : 0,
+        paddingBottom: isMobile ? 10 : 0,
         bgcolor: 'background.default',
         minHeight: '100vh'
       }}>
@@ -144,6 +140,12 @@ function App() {
           />
         </div>
       </Box>
+      {isMobile && (
+        <MobileNavigation
+          activeSection={activeSection}
+          onSelect={(id) => scrollToSection(id)}
+        />
+      )}
     </div>
   );
 }
