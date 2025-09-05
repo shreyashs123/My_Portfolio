@@ -6,6 +6,9 @@ import Box from '@mui/material/Box';
 import IconButton from '@mui/material/IconButton';
 import Avatar from '@mui/material/Avatar';
 import Typography from '@mui/material/Typography';
+import Dialog from '@mui/material/Dialog';
+import DialogContent from '@mui/material/DialogContent';
+import CloseIcon from '@mui/icons-material/Close';
 import LightModeIcon from '@mui/icons-material/LightMode';
 import DarkModeIcon from '@mui/icons-material/DarkMode';
 
@@ -24,6 +27,7 @@ import { useCustomTheme } from './contexts/ThemeContext';
 
 function App() {
   const [activeSection, setActiveSection] = React.useState('home');
+  const [isAvatarOpen, setIsAvatarOpen] = React.useState(false);
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('md'));
   const { isDarkMode, toggleTheme } = useCustomTheme();
@@ -59,7 +63,12 @@ function App() {
       {isMobile && (
         <AppBar position="fixed" color="default" elevation={1}>
           <Toolbar sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
-            <Avatar src="/shreyas1.jpg" alt="Shreyas hs" sx={{ width: 40, height: 40 }} />
+            <Avatar 
+              src="/shreyas1.jpg" 
+              alt="Shreyas hs" 
+              sx={{ width: 40, height: 40, cursor: 'pointer' }}
+              onClick={() => setIsAvatarOpen(true)}
+            />
             <Box sx={{ flex: 1, minWidth: 0 }}>
               <Typography variant="subtitle1" noWrap sx={{ fontWeight: 700 }}>
                 Shreyas hs
@@ -84,6 +93,7 @@ function App() {
           width={320}
           mobileOpen={false}
           onClose={() => {}}
+          onAvatarClick={() => setIsAvatarOpen(true)}
           isMobile={false}
         />
       )}
@@ -165,6 +175,30 @@ function App() {
           onSelect={(id) => scrollToSection(id)}
         />
       )}
+
+      {/* Image Preview Dialog */}
+      <Dialog
+        open={isAvatarOpen}
+        onClose={() => setIsAvatarOpen(false)}
+        fullScreen={isMobile}
+        aria-labelledby="avatar-preview"
+      >
+        <Box sx={{ position: 'absolute', top: 8, right: 8, zIndex: 1 }}>
+          <IconButton aria-label="close" onClick={() => setIsAvatarOpen(false)}>
+            <CloseIcon />
+          </IconButton>
+        </Box>
+        <DialogContent sx={{ p: 0, bgcolor: 'black' }}>
+          <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center', width: '100%', height: isMobile ? '100vh' : '80vh' }}>
+            <Box
+              component="img"
+              src="/shreyas1.jpg"
+              alt="Shreyas hs"
+              sx={{ maxWidth: '95vw', maxHeight: isMobile ? '95vh' : '78vh', objectFit: 'contain' }}
+            />
+          </Box>
+        </DialogContent>
+      </Dialog>
     </div>
   );
 }

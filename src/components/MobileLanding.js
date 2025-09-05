@@ -34,7 +34,7 @@ export default function MobileLanding() {
         <Card sx={{ mb: 3, borderRadius: 3, boxShadow: 2 }}>
           <CardContent sx={{ textAlign: 'center', py: 4 }}>
             <Avatar
-              src="/shreyas1.jpg"
+              src="/shreyas2.jpg"
               alt="Shreyas hs"
               sx={{ 
                 width: 120, 
@@ -117,7 +117,7 @@ export default function MobileLanding() {
             <Box sx={{ display: 'flex', justifyContent: 'center', gap: 3 }}>
               <Button
                 component="a"
-                href="https://github.com/c' },
+                href="https://github.com/shreyashs123"
                 target="_blank"
                 variant="outlined"
                 startIcon={<GitHubIcon />}
@@ -131,7 +131,7 @@ export default function MobileLanding() {
               </Button>
               <Button
                 component="a"
-                href="https:" www.linkedin.com/in/Shreyas hs-p-2247aa374 "
+                href="https://www.linkedin.com/in/shreyas-h-s-gowda"
                 target="_blank"
                 variant="outlined"
                 startIcon={<LinkedInIcon />}

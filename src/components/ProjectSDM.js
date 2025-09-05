@@ -57,16 +57,7 @@ export default function ProjectSDM() {
               >
                 Live Demo
               </Button>
-              <Button
-                variant="outlined"
-                color="primary"
-                component="a"
-                href="https://github.com/shreyashs123/collegewedsite44"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                View Repository
-              </Button>
+              {/* Removed View Repository button as requested */}
             </Stack>
           </CardContent>
         </Card>

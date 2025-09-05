@@ -35,6 +35,7 @@ export default function Drawer({
     role: 'Frontend Developer',
     avatarUrl: '',
   },
+  onAvatarClick,
   links = [
     { id: 'home', label: 'Home', icon: <HomeIcon /> },
   { id: 'about', label: 'About', icon: <InfoIcon /> },
@@ -114,8 +115,10 @@ export default function Drawer({
               backgroundSize: 'cover',
               backgroundPosition: 'center',
               border: '2px solid rgba(255, 255, 255, 0.2)',
-              boxShadow: '0 2px 8px rgba(0, 0, 0, 0.1)'
+              boxShadow: '0 2px 8px rgba(0, 0, 0, 0.1)',
+              cursor: onAvatarClick ? 'pointer' : 'default'
             }}
+            onClick={onAvatarClick}
           >
             {(!profile.avatarUrl && profile.name) ? profile.name.slice(0, 1) : null}
           </Avatar>
