@@ -61,7 +61,7 @@ export default function ProjectSDM() {
                 variant="outlined"
                 color="primary"
                 component="a"
-                href="https://github.com/Shreyas hs497cs/collegewedsite44"
+                href="https://github.com/shreyashs123/collegewedsite44"
                 target="_blank"
                 rel="noopener noreferrer"
               >

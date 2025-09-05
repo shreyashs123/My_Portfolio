@@ -117,7 +117,7 @@ export default function MobileLanding() {
             <Box sx={{ display: 'flex', justifyContent: 'center', gap: 3 }}>
               <Button
                 component="a"
-                href="https://github.com/Shreyas hs497c' },
+                href="https://github.com/c' },
                 target="_blank"
                 variant="outlined"
                 startIcon={<GitHubIcon />}

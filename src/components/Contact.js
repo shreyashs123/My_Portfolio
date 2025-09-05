@@ -81,7 +81,7 @@ export default function Contact({ onPhone, onEmail, onLinkedIn }) {
           email: formData.email,
           subject: formData.subject,
           message: formData.message,
-          to: 'nischalk762@gmail.com'
+          to: 'shreyashsgowda2@gmail.com'
         })
       });
 
