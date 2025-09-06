@@ -107,7 +107,7 @@ export default function Contact({ onPhone, onEmail, onLinkedIn }) {
       
       setSnackbar({
         open: true,
-        message: 'Failed to send message. Please try again later or contact me directly at nischalk762@gmail.com',
+        message: 'Failed to send message. Please try again later or contact me directly at shreyashsgowda2@gmail.com',
         severity: 'error'
       });
     } finally {
