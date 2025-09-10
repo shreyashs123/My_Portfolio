@@ -49,30 +49,21 @@ Driven by a desire to create meaningful digital experiences, I'm eager to join d
 
             <Stack direction={{ xs: 'column', sm: 'row' }} spacing={1.5} sx={{ mt: 3, alignItems: 'center', justifyContent: { xs: 'center', sm: 'flex-start' } }}>
               <Button 
-                variant="contained" 
-                color="primary" 
-                onClick={() => {
-                  onContact();
-                  // Smooth scroll to contact section
-                  setTimeout(() => {
-                    const contactSection = document.querySelector('[data-section="contact"]');
-                    if (contactSection) {
-                      contactSection.scrollIntoView({ behavior: 'smooth' });
-                    }
-                  }, 100);
-                }} 
-                disableElevation
-              >
-                Contact Me
-              </Button>
-              <Button 
                 variant="outlined" 
                 color="primary" 
                 component="a" 
                 href={process.env.PUBLIC_URL + '/shreyashs resume1.pdf'} 
-                download 
                 target="_blank" 
                 rel="noopener noreferrer"
+              >
+                View Resume
+              </Button>
+              <Button 
+                variant="contained" 
+                color="primary" 
+                component="a" 
+                href={process.env.PUBLIC_URL + '/shreyashs resume1.pdf'} 
+                download
               >
                 Download Resume
               </Button>
