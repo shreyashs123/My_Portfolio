@@ -80,6 +80,22 @@ export default function MobileLanding() {
               >
                 View Projects
               </Button>
+              <Button
+                component="a"
+                href={process.env.PUBLIC_URL + '/shreyashs resume1.pdf'}
+                download
+                target="_blank"
+                rel="noopener noreferrer"
+                variant="outlined"
+                size="large"
+                sx={{
+                  borderColor: '#1a237e',
+                  color: '#1a237e',
+                  '&:hover': { borderColor: '#0d47a1', bgcolor: 'rgba(202, 204, 228, 0.04)' }
+                }}
+              >
+                Download Resume
+              </Button>
             </Box>
           </CardContent>
         </Card>
