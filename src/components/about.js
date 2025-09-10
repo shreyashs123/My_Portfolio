@@ -65,7 +65,15 @@ Driven by a desire to create meaningful digital experiences, I'm eager to join d
               >
                 Contact Me
               </Button>
-              <Button variant="outlined" color="primary" onClick={onDownloadResume}>
+              <Button 
+                variant="outlined" 
+                color="primary" 
+                component="a" 
+                href={process.env.PUBLIC_URL + '/shreyashs resume1.pdf'} 
+                download 
+                target="_blank" 
+                rel="noopener noreferrer"
+              >
                 Download Resume
               </Button>
             </Stack>
