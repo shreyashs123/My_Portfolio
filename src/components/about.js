@@ -52,7 +52,7 @@ Driven by a desire to create meaningful digital experiences, I'm eager to join d
                 variant="outlined" 
                 color="primary" 
                 component="a" 
-                href={process.env.PUBLIC_URL + '/shreyashs resume1.pdf'} 
+                href={process.env.PUBLIC_URL + '/MY_Resume_.pdf'} 
                 target="_blank" 
                 rel="noopener noreferrer"
               >
@@ -62,7 +62,7 @@ Driven by a desire to create meaningful digital experiences, I'm eager to join d
                 variant="contained" 
                 color="primary" 
                 component="a" 
-                href={process.env.PUBLIC_URL + '/shreyashs resume1.pdf'} 
+                href={process.env.PUBLIC_URL + '/MY_Resume_.pdf'} 
                 download
               >
                 Download Resume

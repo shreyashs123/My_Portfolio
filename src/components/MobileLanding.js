@@ -82,7 +82,7 @@ export default function MobileLanding() {
               </Button>
               <Button
                 component="a"
-                href={process.env.PUBLIC_URL + '/shreyashs resume1.pdf'}
+                href={process.env.PUBLIC_URL + '/MY_Resume_.pdf'}
                 download
                 target="_blank"
                 rel="noopener noreferrer"
