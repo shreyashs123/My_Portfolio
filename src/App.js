@@ -135,7 +135,7 @@ function App() {
           <Contact
             onPhone={() => (window.location.href = 'tel:+91 6363894617')}
             onEmail={() => (window.location.href = 'mailto:Shreyasshsgowda2@gmail.com')}
-            onLinkedIn={() => window.open('https://www.linkedin.com/in/Shreyas hs-p-2247aa374', '_blank', 'noopener,noreferrer')}
+            onLinkedIn={() => window.open('https://www.linkedin.com/in/shreyas-h-s-gowda-418025380/', '_blank', 'noopener,noreferrer')}
           />
         </div>
         {isMobile && (
