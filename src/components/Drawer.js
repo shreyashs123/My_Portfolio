@@ -45,7 +45,7 @@ export default function Drawer({
   ],
   socials = [
     { id: 'github', icon: <GitHubIcon />, href: 'https://github.com/shreyashs123' },
-    { id: 'linkedin', icon: <LinkedInIcon />, href: 'https://www.linkedin.com/in/shreyas-h-s-gowda' },
+    { id: 'linkedin', icon: <LinkedInIcon />, href: 'https://www.linkedin.com/in/shreyas-h-s-gowda-418025380/' },
 
     { id: 'email', icon: <MailOutlineIcon />, href: 'https://mail.google.com/mail/?view=cm&fs=1&to=shreyashsgowda2@gmail.com' },
     { id: 'whatsapp', icon: <WhatsAppIcon />, href: 'https://wa.me/6363894617' },

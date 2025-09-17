@@ -147,7 +147,7 @@ export default function MobileLanding() {
               </Button>
               <Button
                 component="a"
-                href="https://www.linkedin.com/in/shreyas-h-s-gowda"
+                href="https://www.linkedin.com/in/shreyas-h-s-gowda-418025380/"
                 target="_blank"
                 variant="outlined"
                 startIcon={<LinkedInIcon />}

@@ -156,7 +156,7 @@ function App() {
               <IconButton size="small" color="inherit" component="a" href="https://github.com/shreyashs123" target="_blank" rel="noopener noreferrer" aria-label="github">
                 <GitHubIcon />
               </IconButton>
-              <IconButton size="small" color="inherit" component="a" href="https://www.linkedin.com/in/shreyas-h-s-gowda" target="_blank" rel="noopener noreferrer" aria-label="linkedin">
+              <IconButton size="small" color="inherit" component="a" href="https://www.linkedin.com/in/shreyas-h-s-gowda-418025380/" target="_blank" rel="noopener noreferrer" aria-label="linkedin">
                 <LinkedInIcon />
               </IconButton>
               <IconButton size="small" color="inherit" component="a" href="mailto:shreyashsgowda2@gmail.com" aria-label="email">
